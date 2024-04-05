@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/h5/").setViewName("forward:/h5/index.html");
+        registry.addViewController("/h5").setViewName("forward:/h5/index.html");
         WebMvcConfigurer.super.addViewControllers(registry);
     }
 
