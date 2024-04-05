@@ -19,6 +19,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
+/**
+ * 添加一些注释
+ */
 @RestController
 @Slf4j
 public class FaceAuthController {
