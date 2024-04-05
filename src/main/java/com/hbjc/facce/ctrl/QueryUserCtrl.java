@@ -68,6 +68,7 @@ public class QueryUserCtrl {
         }
         String user_name=params.get("user_name").toString();
         String dept_name=params.get("dept_name").toString();
+        String idcard_no=params.get("idcard_no").toString();
         Optional<UserModel> optionalUserModel = userModelList.stream().filter(i -> i.getUser_name().equals(user_name) && i.get单位全称().equals(dept_name)).findAny();
         if(optionalUserModel.isPresent()){
             return optionalUserModel.get();
