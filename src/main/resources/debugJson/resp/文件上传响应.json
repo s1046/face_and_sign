@@ -1,0 +1,13 @@
+{
+  "code": 200,
+  "data": {
+    "businessId": "20237612011464bg44",
+    "fileId": "81988040eaa341899c0db1bcdb7a08b8",
+    "fileName": "测试.pdf",
+    "format": "pdf",
+    "pageCount": 1,
+    "scale": "2"
+  },
+  "msg": "成功",
+  "traceId": "50c7414456cc4cb69e19c3eae797d6f3"
+}

@@ -1,0 +1,31 @@
+{
+  "msgType": "completeSign",
+  "code": 200,
+  "data": {
+    "signFiles": [
+      {
+        "fileName": "自由签.pdf",
+        "fileSignState": 0,
+        "fileId": "51a41bfb155e44318727d7ad380b7b16"
+      },
+      {
+        "fileName": "关键字签章.pdf",
+        "fileSignState": 0,
+        "fileId": "ca0a405d9f2c4facbe11e2235f5ddc76"
+      },
+      {
+        "fileName": "坐标签章.pdf",
+        "fileSignState": 0,
+        "fileId": "93804a76f69e450eb2c8f0c694dec9a4"
+      }
+    ],
+    "businessId": "202308111450430982365443814",
+    "delState": "0",
+    "signCompleteState": 2,
+    "delTime": "2023-08-18 14:50:43",
+    "signCompleteTime": "2023-08-11 14:50:53",
+    "serialNo": "1691736644"
+  },
+  "msgTitle": "完成签署",
+  "sendTime": "2023-08-11 14:50:54"
+}

@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "data": {
+    "businessId": "202308141753427819263287338",
+    "serialNo": "123456789100",
+    "url": "http://ip:端口/#/cloudSign?businessId=202308141753427819263287338"
+  },
+  "msg": "成功",
+  "traceId": "02fbbbf3be0847669d81c426b5b208da"
+}

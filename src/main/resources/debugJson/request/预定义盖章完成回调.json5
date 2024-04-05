@@ -1,0 +1,48 @@
+{
+  "code": 200,
+  "data": {
+    "businessId": "202308241634552302558943094",
+    "completeTime": "2023-08-24 16:38:39",
+    "files": [
+      {
+        "fileId": "e3c51b74f3a04ef3bcbb8bd220d321ff",
+        "predefinedSignatures": [
+          {
+            "customParams": [
+              {
+                "key": "txId",
+                "value": "123456"
+              }
+            ],
+            "pageNum": 1,
+            "signingId": "91110108756730417W",
+            "signingName": "北京安证通信息科技股份有限公司",
+            "type": 2,
+            "x": 624,
+            "y": 394
+          },
+          {
+            "customParams": [
+              {
+                "key": "txId",
+                "value": "123456"
+              }
+            ],
+            "pageNum": 2,
+            "signingId": "91110108756730417W",
+            "signingName": "北京安证通信息科技股份有限公司",
+            "type": 4,
+            "x": 397,
+            "y": 460
+          }
+        ],
+        "status": 1
+      }
+    ],
+    "serialNo": "1692865797",
+    "status": 2
+  },
+  "msgTitle": "完成预定义盖章",
+  "msgType": "completeSign",
+  "sendTime": "2023-08-24 16:38:51"
+}

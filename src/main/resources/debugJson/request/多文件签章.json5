@@ -1,0 +1,66 @@
+{
+  "userInfo": {
+    "orginalFiles": [{
+      "fileData": "${fileData}}",
+      "fileUrl": "",
+      "filename": "",
+      "inFileAccessPassword": "",
+      "sourceType": "2"
+    }
+     ],
+    "sealCert":
+    {
+      "cert": {
+        "appType": "1",
+        "certData": "",
+        "certName": "",
+        "certPass": "",
+        "certType": "",
+        "certUrlType": "3",
+        "identNo": "",
+        "localPath": "",
+        "orgId": "",
+        "sealCode": "${sealCode}",
+        "sealCodeType": "1",
+        "sourceType": "3",
+        "token": "",
+        "userId": "",
+        "userType": "1",
+        "uuid": ""
+      },
+      "positionParam": {
+        "positionType": "0",
+        "sealAreaPosition": null,
+        "sealPosition": {
+          "coordinateOrigin": "1",
+          "locateMode": "1",
+          "locateMove": "1",
+          "pageNum": "1",
+          "pageType": "0",
+          "xPosition": "${xPosition}",
+          "yPosition": "${yPosition}"
+        },
+        "keyWord": {
+          "keyWord": "盖章处：", //关键字
+          "keyIndex": "0",
+          "upOrDown": "",
+          "leftOrRight": ""
+        }
+      },
+      "rotate": "0",
+      "sealCertDat": null,
+      "sealImg": null,
+      "sourceType": "1"
+    },
+    "signedFiles": [{
+      "saveType": "2"
+    }]
+      },
+  "appInfo": {
+    "aesKey": "",
+    "appId": "d01fa78a4c3e4fad82703705b618b4c3",
+    "appKey": "ebd91896ce68436cb7a6bbd061824886",
+    "privateKey": "",
+    "publicKey": ""
+  }
+}

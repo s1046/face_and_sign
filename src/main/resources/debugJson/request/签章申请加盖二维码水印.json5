@@ -1,0 +1,102 @@
+{
+  "serialNo": "123456789100",
+  "files": [
+    {
+      "fileId": "15041eb358384771b0562dd8141d2678",
+      "location": {
+        //定位类型 1:手动定位 2:关键字 3:坐标定位 必填
+        "locationType": "1"
+      }
+    }
+  ],
+  "user": {
+    "userSource": "1",
+    "userType": 1,
+    "userName": "xxx",
+    "idCard": "xxx",
+    "orgName": "xxx",
+    "orgCode": "xxx",
+    "userId": "",
+    "uumsId": ""
+  },
+  "sealConfig": {
+    "getType": 1,
+    "subGetType": 0,
+    "sealCode": "",
+    "sealNature": "",
+    "usePerson": {
+      //默认意愿认证使用人名称 必填
+      "useName": "xxxxx",
+      //默认意愿认证使用人身份证号码 必填
+      "useIdCard": "xxxxx",
+      //默认意愿认证使用人手机号码 非必填  getType=0 无章情况，同时签章设置开启短信验证码意愿认证则必填
+      "mobile": "",
+      //默认意愿认证使用人银行卡号 非必填 需银联卡四要素意愿认证场景下必填
+      "bankCardNo": "",
+      //默认意愿认证使用人邮箱 意愿认证邮箱意愿认证时需要填写
+      "email": ""
+    },
+    //印章为getType=0或者getType=null情况下找不到印章，印章自动生成方案 多个逗号隔开
+    "personalSealType": "0,1,2",
+    "personalSealStyle": {
+      "fontFamliy": "",
+      "fontSize": "24",
+      "fontColor": "1",
+      "fontContent": "xxx"
+    },
+    //是否加盖骑缝章 0:否（默认） 1:需要 非必填
+    "seamState": 1,
+    "seamConfig": {
+      "seamPageType": 0,
+      "seamPage": "1-8",
+      "seamLocationY": 100
+    },
+    //是否印章下方带签章时间 1:是 0:否
+    "timeStampType": 1,
+    "signTimeConfig": {
+      "timeFormat": "yyyy年MM月dd日",
+      "timeLocationX": 100,
+      "timeLocationY": 100
+    }
+  },
+  "waterConfig": {
+    "waterFileId": "水印文件id",
+    "location": {
+      // 定位类型  2:关键字 3:坐标定位
+      "locationType": "3",
+      "positions": [
+        {
+          "xPosition": 300,
+          "yPosition": 300,
+          "coordinateOrigin": 2,
+          // 坐标原点类型
+          "locateMode": 1,
+          // 印章定位方式
+          "page": "1"
+        }
+      ]
+    }
+  },
+  "barcodeState": 1,
+  "barcodeConfig": {
+    "barContent": "测试二维码内容",
+    "barWidth": "100",
+    "barHeight": "100",
+    "location": {
+      // 定位类型  2:关键字 3:坐标定位
+      "locationType": "3",
+      "positions": [
+        {
+          "xPosition": 300,
+          "yPosition": 300,
+          "coordinateOrigin": 2,
+          // 坐标原点类型
+          "locateMode": 1,
+          // 印章定位方式
+          "page": "3"
+        }
+      ]
+    }
+  },
+  "notifyUrl": "https://www.baidu.com"
+}

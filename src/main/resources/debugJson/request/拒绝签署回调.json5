@@ -1,0 +1,35 @@
+{
+  "msgType": "refuseSign",
+  "code": 200,
+  "data": {
+    "signFiles": [
+      {
+        "fileName": "关键字签章.pdf",
+        "signTime": "2023-08-11 14:47:56",
+        "fileSignState": -2,
+        "fileId": "1eee01ff56d840188a24f164810eea27"
+      },
+      {
+        "fileName": "坐标签章.pdf",
+        "signTime": "2023-08-11 14:47:56",
+        "fileSignState": -2,
+        "fileId": "aa23021f06dc49d6871b531d1cf8b26b"
+      },
+      {
+        "fileName": "自由签.pdf",
+        "signTime": "2023-08-11 14:47:56",
+        "fileSignState": -2,
+        "fileId": "2afdcea0043d4f31ba87b3381f23e541"
+      }
+    ],
+    "refundReason": "文件有问题，我拒绝签署",
+    "businessId": "202308111010228591265639203",
+    "delState": "0",
+    "signCompleteState": -2,
+    "delTime": "2023-08-18 10:10:23",
+    "signCompleteTime": "2023-08-11 14:47:56",
+    "serialNo": "1691719823"
+  },
+  "msgTitle": "拒绝签署",
+  "sendTime": "2023-08-11 14:47:57"
+}

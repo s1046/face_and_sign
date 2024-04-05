@@ -1,0 +1,21 @@
+{
+  "msgType": "saveSign",
+  "code": 200,
+  "data": {
+    "signFiles": [
+      {
+        "fileName": "坐标签章.pdf",
+        "signTime": "2023-08-11 10:50:23",
+        "fileSignState": 1,
+        "fileId": "9e9fde7edd994a4ab9c956e841b44f07"
+      }
+    ],
+    "businessId": "202308111041561430702412147",
+    "delState": "0",
+    "signCompleteState": 1,
+    "delTime": "2023-08-18 10:41:56",
+    "serialNo": "1691721717"
+  },
+  "msgTitle": "保存签署",
+  "sendTime": "2023-08-11 10:50:24"
+}

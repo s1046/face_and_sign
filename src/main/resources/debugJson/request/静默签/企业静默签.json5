@@ -1,0 +1,51 @@
+//静默签只支持企业签章
+//静默签分为企业无章传sealCode、传sealNature、传sealImage签章
+//静默签分为企业有章传sealCode、传sealNature
+//如果企业取章条件多个印章则默认会取第一个印章作静默签
+{
+  "serialNo": "123456789100",
+  "files": [
+    {
+      "fileId": "810c8109328842ffadea69e3aa304164",
+      "location": {
+        "locationType": "3",
+        "positions": [
+          {
+            "xPosition": 300,
+            "yPosition": 300,
+            "coordinateOrigin": 2,
+            "locateMode": 1,
+            "page": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "user": {
+    "userSource": "1",
+    "userType": 1,
+    //机构编码
+    "orgName": "机构名称",
+    //机构编码
+    "orgCode": "机构编码"
+  },
+  "sealConfig": {
+    // 印章获取方式 0: 没有办理电子印章(无章) 1：通过subGetType判断(有章) 2：印章特性码[支持多个](有章)
+    "getType": 1,
+    //印章获取方式getType=1时必填，当userType=1机构时，支持传0或4。0:不区分[自己、授权自己]1:仅取自己的印章(取sealType私章)2:取授权自己所有企业印章3:取指定企业授权印章 4:具体印章类型码[支持多个]
+    "subGetType": 0,
+    //getType=0选填 或者 getType=2必填
+    "sealCode": "印章特性码",
+    //getType=0选填 或者 subGetType=4必填
+    "sealNature": "印章类型",
+    //是否开启静默签 1:开启 0:关闭
+    "silentSignState": 1,
+    //印章为无章场景时 (getType=0) 3:传入电子印章
+    "personalSealType": "0,1,2",
+    //personalSealType=3必填
+    "sealImage": "",
+    //是否加盖时间章 1:开启 0:关闭
+    "timeStampType": 1
+  },
+  "notifyUrl": "https://www.baidu.com"
+}

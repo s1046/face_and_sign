@@ -1,0 +1,36 @@
+{
+  "serialNo": "123456789100",
+  "files": [
+    {
+      "fileId": "810c8109328842ffadea69e3aa304164",
+      "location": {
+        "locationType": "3",
+        "positions": [
+          {
+            "xPosition": 300,
+            "yPosition": 300,
+            "coordinateOrigin": 2,
+            "locateMode": 1,
+            "page": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "user": {
+    "userSource": "1",
+    "userType": 1,
+    //机构名称
+    "orgName": "",
+    //机构编码
+    "orgCode": ""
+  },
+  "sealConfig": {
+    "getType": 0,
+    "sealImage": "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",
+    "silentSignState": 1,
+    "personalSealType": "3",
+    "timeStampType": 1
+  },
+  "notifyUrl": "https://www.baidu.com"
+}

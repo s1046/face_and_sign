@@ -1,0 +1,18 @@
+{
+  "code": 200,
+  "data": {
+    "businessId": "202308141503146652539477986",
+    "delState": "0",
+    "delTime": "2023-08-21 15:03:15",
+    "signCompleteState": 0,
+    "signFiles": [
+      {
+        "fileId": "15041eb358384771b0562dd8141d2678",
+        "fileName": "测试.pdf",
+        "fileSignState": 0
+      }
+    ]
+  },
+  "msg": "成功",
+  "traceId": "0f8d9f4b5b564d1f9de2cfd67d1c48f8"
+}

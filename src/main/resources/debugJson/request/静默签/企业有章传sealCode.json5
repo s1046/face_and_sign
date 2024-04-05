@@ -1,0 +1,36 @@
+{
+  "serialNo": "123456789100",
+  "files": [
+    {
+      "fileId": "a8bb8073b9f24a748755de9e4d459fe4",
+      "location": {
+        "locationType": "3",
+        "positions": [
+          {
+            "xPosition": 300,
+            "yPosition": 300,
+            "coordinateOrigin": 2,
+            "locateMode": 1,
+            "page": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "user": {
+    "userSource": "1",
+    "userType": 1,
+    //机构名称
+    "orgName": "",
+    //机构编码
+    "orgCode": ""
+  },
+  "sealConfig": {
+    "getType": 2,
+    "sealCode": "印章特性码",
+    "silentSignState": 1,
+    "personalSealType": "0,1,2",
+    "timeStampType": 1
+  },
+  "notifyUrl": "https://www.baidu.com"
+}

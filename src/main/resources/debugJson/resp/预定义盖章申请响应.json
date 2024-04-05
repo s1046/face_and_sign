@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "data": {
+    "businessId": "202308241634552302558943094",
+    "serialNo": "1692865797",
+    "url": "http://ip:端口/#/predefinedSign?businessId=202308241634552302558943094"
+  },
+  "msg": "成功",
+  "traceId": "b29eb5b3b02547a48ce35524722b767a"
+}

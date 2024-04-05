@@ -1,0 +1,22 @@
+{
+  "serialNo": "1692865797",
+  "notifyUrl": "https://www.baidu.com",
+  "predefinedSignatures": [
+    {
+      "fileId": "e3c51b74f3a04ef3bcbb8bd220d321ff",
+      "contractParties": [
+        {
+          "signingType": "1",
+          "signingId": "91110108756730417W",
+          "signingName": "北京安证通信息科技股份有限公司",
+          "customParams": [
+            {
+              "key": "txId",
+              "value": "123456"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
