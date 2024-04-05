@@ -65,9 +65,9 @@ public class FaceAuthController {
         if(jsonObject.get("code").equals("0")){
             Map<String,String> map=new HashMap<>();
             map.put("idcard_name",scanFaceInitModel.getIdcard_name());
+            map.put("idcard_number",scanFaceInitModel.getIdcard_number());
             map.put("company",scanFaceInitModel.getCompany());
             cache.put(jsonObject.getJSONObject("data").getString("biz_id"),JSONObject.toJSONString(map));
-
         }
         log.info("jsonObject:{}",jsonObject);
         return  jsonObject;

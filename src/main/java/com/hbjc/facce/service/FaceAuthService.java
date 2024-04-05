@@ -33,6 +33,7 @@ public class FaceAuthService {
         String biz_id = scanFaceResultModel.getBiz_id();
         Map map = JSON.parseObject(cache.getIfPresent(biz_id),Map.class);
         String idcard_name=map.get("idcard_name").toString();
+        String idcard_number=map.get("idcard_number").toString();
         String company=map.get("company").toString();
 
         String userListStr=cache.getIfPresent("userList");
@@ -45,8 +46,6 @@ public class FaceAuthService {
             cache.put("userList",JSONObject.toJSONString(userModelList));
         }
         Optional<UserModel> any = userModelList.stream().filter(i -> i.get单位全称().equals(company) && i.getUser_name().equals(idcard_name)).findAny();
-        if(any.isPresent()){
-            myService.updateIsActive(any.get().getId(),1);
-        }
+        any.ifPresent(userModel -> myService.updateIsActive(userModel.getId(), idcard_number));
     }
 }

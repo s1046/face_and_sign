@@ -1,5 +1,6 @@
 package com.hbjc.facce.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlParameter;
@@ -13,17 +14,19 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Map;
   
-@Service  
+@Service
+@Slf4j
 public class MyService {
   
     @Autowired  
     private JdbcTemplate jdbcTemplate;  
   
-    public void updateIsActive(int id, int isActive) {  
+    public void updateIsActive(int id, String idcard_number) {
        String sql="UPDATE tb_sys_user\n" +
-               " SET is_active = 1\n" +
+               " SET is_active = 1,IDCardNO_JC='%s'" +
                " WHERE id = %s; ";
-        String format = String.format(sql, id);
+        String format = String.format(sql, idcard_number,id);
+        log.info("执行sql:{}",format);
         jdbcTemplate.execute(format);
     }
 

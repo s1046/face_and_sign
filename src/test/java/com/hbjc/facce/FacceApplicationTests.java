@@ -47,12 +47,7 @@ class FacceApplicationTests {
     @Value("${filePath}")
     private String filePath;
 
-    @Test
-    void contextLoads() {
 
-        myService.updateIsActive(0,1);
-
-    }
 
 
     @Test
