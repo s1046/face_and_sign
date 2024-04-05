@@ -1,0 +1,15 @@
+{
+  //云文档的服务地址http://ip:端口/iCloudDoc
+  "aztUrl": "http://17.67.100.119:9000/iCloudDoc",
+  //云文档分配的appId Saas版需云平台提供appId
+  "appId": "dianziqianzhang",
+  //云文档分配的appKey Saas版需云平台提供appKey
+  "appSecret": "ok4XOnvBzzKr2hgPV6l426m8IU",
+  //云文档版本地址 默认1.0 2.0代表Saas版
+  "version": "1.0",
+  //回调通知地址 客户方可以配置方便测试调试
+  "notifyUrl": "http://www.baidu.com",
+  //JSON文件地址 如果为控制默认会加载根目录下的resources下面的debugJson文件。
+  //如果将debugJson文件拷贝出来到指定目录请配置 例如：jsonFilePath=D://test// 就会去加载D盘下面的D://test//debugJson//request//静默签//企业静默签.json5
+  "jsonFilePath": ""
+}
