@@ -21,9 +21,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Base64;
@@ -64,7 +66,7 @@ public class MultipleSignCtrl {
      * @throws Exception
      */
     @PostMapping("/multipleSign")
-    public Map<String, Object> multipleSign(@RequestBody Map params) throws Exception {
+    public Map<String, Object> multipleSign(@RequestBody Map params, HttpServletRequest request) throws Exception {
         String  reportId= params.get("reportId").toString();
         String templateId=params.get("templateId").toString();
         String uniqueName= Md5Util.getMd5(templateId.concat("_").concat(reportId));
@@ -121,7 +123,9 @@ public class MultipleSignCtrl {
             myService.Base64ToFile(jsonObject.getString("signedPdfBase"),downloadPath+uniqueName.concat(".pdf"));
         }
         Map<String,Object>  returnMap=new HashMap<>();
-        returnMap.put("pdf",String.format(serverPdfUrl,uniqueName.concat(".pdf")));
+        String host = new URL(request.getRequestURL().toString()).getHost();
+        Integer port=request.getServerPort();
+        returnMap.put("pdf",String.format(serverPdfUrl,host,port,uniqueName.concat(".pdf")));
         returnMap.put("uploadFileId",uploadFileId);
         return returnMap;
     }

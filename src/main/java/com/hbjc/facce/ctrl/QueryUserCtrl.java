@@ -89,9 +89,17 @@ public class QueryUserCtrl {
             return optionalUserModel.get();
         }else {
             //查不到的时候构造一个
+//            UserModel userModel=new UserModel();
+//            userModel.setId(-999);
+//            return userModel;
+
             UserModel userModel=new UserModel();
-            userModel.setId(-999);
-            return userModel;
+            userModel.setId(11111111);
+            userModel.set_active(false);
+            userModel.setLogin_name("徐兵");
+            userModel.set单位全称("哈哈");
+            userModel.setUser_name("徐兵");
+            return  userModel;
 
         }
     }

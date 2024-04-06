@@ -17,6 +17,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 
 /**
@@ -53,12 +56,14 @@ public class FaceAuthController {
      */
     @CrossOrigin
     @PostMapping("/auth_init")
-    public Object authInit(@RequestBody ScanFaceInitModel scanFaceInitModel) throws IllegalAccessException {
+    public Object authInit(@RequestBody ScanFaceInitModel scanFaceInitModel, HttpServletRequest request) throws Exception {
+        String host = new URL(request.getRequestURL().toString()).getHost();
+        Integer port=request.getServerPort();
         String timestamp=String.valueOf(System.currentTimeMillis());
         scanFaceInitModel.setTimestamp(timestamp);
         scanFaceInitModel.setAccount(appId);
         scanFaceInitModel.setAppKey(appKey);
-        scanFaceInitModel.setReturn_url(returnUrl);
+        scanFaceInitModel.setReturn_url(String.format(returnUrl,host,port));
         scanFaceInitModel.setQuery_code(UUID.randomUUID().toString().replace("-",""));
         scanFaceInitModel.setSign(SignBuilder.buildSign(scanFaceInitModel));
         String faceInitUrl=baseUrl+faceInit;

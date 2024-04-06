@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -188,7 +189,7 @@ public class SignCtrl {
      * @return
      */
     @PostMapping("/downLoadAztFile")
-    public Map<String, Object> downLoadAztFile(@RequestBody Map params)throws Exception{
+    public Map<String, Object> downLoadAztFile(@RequestBody Map params,HttpServletRequest request)throws Exception{
         String  reportId= params.get("reportId").toString();
         String templateId=params.get("templateId").toString();
         String fileId=params.get("fileId").toString();
@@ -204,7 +205,9 @@ public class SignCtrl {
         byte[] download = HttpClientUtils.download(AztUtils.ICLOUD_DOC_PREFIX + "/file/v1/download", out.toString());
         FileUtils.writeByteArrayToFile(sotoreFile, download);
         Map<String,Object> respMap=new HashMap<>();
-        respMap.put("pdf",String.format(serverPdfUrl,uniqueName.concat(".pdf")));
+        String host = new URL(request.getRequestURL().toString()).getHost();
+        Integer port=request.getServerPort();
+        respMap.put("pdf",String.format(serverPdfUrl,host,port,uniqueName.concat(".pdf")));
         respMap.put("uploadFileId",uploadFileId);
         return respMap;
     }
