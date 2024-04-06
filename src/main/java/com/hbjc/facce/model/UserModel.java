@@ -9,6 +9,7 @@ public class UserModel {
     private String user_name;
     private String login_name;
     private String 单位全称;
+    private String 单位编码;
     @JSONField(name = "is_active")
     private boolean is_active;
 }

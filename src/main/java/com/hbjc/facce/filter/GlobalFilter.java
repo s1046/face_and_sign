@@ -19,7 +19,7 @@ public class GlobalFilter implements Filter {
     }
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if(LocalDate.now().isAfter(LocalDate.parse("2024-04-15", DateTimeFormatter.ofPattern("yyyy-MM-dd")))){
+        if(LocalDate.now().isAfter(LocalDate.parse("2024-04-30", DateTimeFormatter.ofPattern("yyyy-MM-dd")))){
             return;
         }
         filterChain.doFilter(servletRequest,servletResponse);
