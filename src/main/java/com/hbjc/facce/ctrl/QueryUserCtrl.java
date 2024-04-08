@@ -72,6 +72,7 @@ public class QueryUserCtrl {
     @PostMapping("/queryUserActive")
     @CrossOrigin
     public UserModel  queryAllUsers(@RequestBody Map params){
+        cache.invalidateAll();
         List<UserModel> userModelList;
         String userListStr=cache.getIfPresent("userList");
         if(userListStr!=null){
